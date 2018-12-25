@@ -59,9 +59,11 @@ export default {
                 const { data } = response.data
                 localStorage.setItem('auth', JSON.stringify(data))
                 this.$root.auth = data
-                this.$router.push('home')
+                this.$noty.success('Successfully logged in.')
+                this.$router.push('/')
             }).catch(({response}) => {
                 this.loading = false
+                this.$noty.error('Oops something went wrong!')
                 this.submitted = true
                 if (response.status === 401) {
                     this.errors = {
