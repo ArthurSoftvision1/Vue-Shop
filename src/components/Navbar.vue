@@ -4,7 +4,14 @@
             <router-link class="navbar-brand" to="/">
                 <img src="../assets/logo.png" width="30px" height="30px" alt=""/>
             </router-link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-toggle="collapse" 
+                data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -17,7 +24,12 @@
                         <router-link class="nav-link" to="/signup">Signup</router-link>
                     </li>
                     <li class="nav-item dropdown" v-if="authUser">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" 
+                            href="#" id="navbarDropdown" 
+                            role="button" 
+                            data-toggle="dropdown" 
+                            aria-haspopup="true" 
+                            aria-expanded="false">
                         Hey {{ authUser.name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
