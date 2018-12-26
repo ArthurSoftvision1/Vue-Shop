@@ -10,6 +10,12 @@
                         <div class="article-content" v-html="article.content">
 
                         </div>
+                        <div class="comments my-4">
+                            <vue-disqus 
+                                shortname="community-blog" 
+                                :identifier="article.slug"
+                                :url="url"></vue-disqus>
+                        </div>
                     </div>
                 </div>
                 <div class="loader text-center" v-else>
@@ -33,13 +39,14 @@ export default {
     data() {
         return {
             article: {},
-            loading: true
+            loading: true,
+            url: window.location.href
         }
     },
 
     methods: {
          getArticle() {
-            Axios.get(`${config.apiUrl}/articles/${this.$route.params.id}`)
+            Axios.get(`${config.apiUrl}/article/${this.$route.params.id}`)
                 .then(response => {
                     this.loading = false;
                     console.log(response)
