@@ -3,10 +3,13 @@ import App from './App.vue'
 import router from './router'
 import VueNoty from 'vuejs-noty';
 import 'vuejs-noty/dist/vuejs-noty.css'
+import "vue-wysiwyg/dist/vueWysiwyg.css";
 import VueDisqus from 'vue-disqus';
+import wysiwyg from 'vue-wysiwyg';
 
 Vue.use(VueNoty)
 Vue.use(VueDisqus)
+Vue.use(wysiwyg, {})
 
 Vue.config.productionTip = false;
 
