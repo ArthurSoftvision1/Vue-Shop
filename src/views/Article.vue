@@ -49,7 +49,6 @@ export default {
             Axios.get(`${config.apiUrl}/article/${this.$route.params.id}`)
                 .then(response => {
                     this.loading = false;
-                    console.log(response)
                     this.article = response.data.data;
                 })
         }

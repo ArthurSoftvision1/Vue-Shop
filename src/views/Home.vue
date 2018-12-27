@@ -48,7 +48,6 @@ export default {
             Axios.get(url)
                 .then(response => {
                     this.loading = false
-                    console.log(response)
                     this.articles = response.data.data;
                 })
         },
